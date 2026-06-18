@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="95" fill="#312e81"/>
+  <circle cx="100" cy="95" r="55" fill="#fde68a"/>
+  <ellipse cx="85" cy="88" rx="12" ry="16" fill="#1e1b4b"/>
+  <ellipse cx="115" cy="88" rx="12" ry="16" fill="#1e1b4b"/>
+  <polygon points="100,55 115,75 85,75" fill="#7c3aed"/>
+  <ellipse cx="100" cy="105" rx="8" ry="10" fill="#f59e0b"/>
+  <text x="100" y="175" text-anchor="middle" fill="#e9d5ff" font-family="sans-serif" font-size="14" font-weight="700">LUNA</text>
+</svg>

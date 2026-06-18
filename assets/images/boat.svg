@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="16" fill="#1e293b"/>
+  <path d="M60 120 Q100 80 140 120 L140 135 Q100 115 60 135 Z" fill="#92400e"/>
+  <path d="M75 120 L100 95 L125 120" fill="#b45309"/>
+  <rect x="95" y="95" width="10" height="30" fill="#78350f"/>
+  <text x="100" y="185" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="13" font-weight="700">BOAT</text>
+</svg>

@@ -1,0 +1,89 @@
+{
+  "questionsPerRound": 5,
+  "passRequired": 4,
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What object did the Owl say would open the path to Luna's next memory?",
+      "options": ["Flower", "Silver Key", "Pearl", "Lantern"],
+      "answer": "Silver Key",
+      "storyKey": "key_dialogue"
+    },
+    {
+      "id": "q2",
+      "text": "Who guarded the Moonlight Lake?",
+      "options": ["Owl", "Swan", "Firefly", "Luna"],
+      "answer": "Swan",
+      "storyKey": "swan_dialogue"
+    },
+    {
+      "id": "q3",
+      "text": "Which item unlocked the silver gate at the end of Chapter 1?",
+      "options": ["Lantern", "Silver Key", "Moon Crystal", "Mushroom"],
+      "answer": "Silver Key",
+      "storyKey": "gate"
+    },
+    {
+      "id": "q4",
+      "text": "Why did Luna lose her memories?",
+      "options": [
+        "She fell asleep under a tree",
+        "She gave them up to save the forest",
+        "The lake stole them",
+        "The Owl erased them"
+      ],
+      "answer": "She gave them up to save the forest",
+      "storyKey": "sacrifice"
+    },
+    {
+      "id": "q5",
+      "text": "What is Luna's name connected to in the story?",
+      "options": ["The Sun", "The Moon", "The Lake", "The Owl"],
+      "answer": "The Moon",
+      "storyKey": "moon_name"
+    },
+    {
+      "id": "q6",
+      "text": "In the memory game, what does the Key pair with?",
+      "options": ["Gate", "Lock", "Boat", "Pearl"],
+      "answer": "Lock",
+      "storyKey": "key_pair"
+    },
+    {
+      "id": "q7",
+      "text": "What did Luna collect in the forest maze?",
+      "options": ["Three Moon Keys", "Silver Key, Lantern, and Moon Crystal", "Only a Pearl", "Four crystal fragments"],
+      "answer": "Silver Key, Lantern, and Moon Crystal",
+      "storyKey": "forest_items"
+    },
+    {
+      "id": "q8",
+      "text": "What does the Boat memory pair relate to in Chapter 2?",
+      "options": ["The Forest", "The Lake", "The Owl", "The Gate"],
+      "answer": "The Lake",
+      "storyKey": "boat_pair"
+    },
+    {
+      "id": "q9",
+      "text": "What guides Luna according to the Star memory dialogue?",
+      "options": ["Hope", "Fear", "Darkness", "Silence"],
+      "answer": "Hope",
+      "storyKey": "star_hope"
+    },
+    {
+      "id": "q10",
+      "text": "What happens when Luna completes her journey?",
+      "options": [
+        "She leaves the forest forever",
+        "Her memories return and the forest is peaceful",
+        "The lake dries up",
+        "The Owl becomes the guardian"
+      ],
+      "answer": "Her memories return and the forest is peaceful",
+      "storyKey": "ending"
+    }
+  ],
+  "intro": "A Memory Guardian rises from the lake. \"Answer five questions drawn from your journey. Prove you remember Luna's story.\"",
+  "success": "The Guardian dissolves into moonlight. Luna's complete memory shines within the crystal — every moment of her sacrifice and courage restored.",
+  "failure": "The Guardian sighs. \"You must listen to the story more carefully.\" Luna's memories flicker, but hope remains..."
+}

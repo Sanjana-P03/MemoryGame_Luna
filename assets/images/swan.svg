@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="16" fill="#1e293b"/>
+  <ellipse cx="100" cy="110" rx="55" ry="35" fill="#f8fafc"/>
+  <path d="M55 110 Q100 60 145 110 Q100 90 55 110" fill="#e2e8f0"/>
+  <ellipse cx="100" cy="85" rx="8" ry="12" fill="#f59e0b"/>
+  <path d="M145 100 Q165 95 170 105 Q160 110 145 105" fill="#f97316"/>
+  <text x="100" y="185" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="13" font-weight="700">SWAN</text>
+</svg>

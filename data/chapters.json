@@ -1,0 +1,271 @@
+[
+  {
+    "id": 1,
+    "title": "The Enchanted Forest",
+    "background": "assets/images/forest-bg.svg",
+    "intro": "Luna wakes up beneath a glowing tree. Navigate the forest maze, collect magical treasures, then face the memory challenge.",
+    "fragmentName": "Forest Memory Fragment",
+    "forestMaze": {
+      "title": "Forest Maze — Collect Treasures",
+      "hint": "Use Arrow Keys (↑ ↓ ← →) or the W A S D keys on your keyboard to move Luna one step at a time. Collect the Silver Key, Lantern, and Moon Crystal.",
+      "collectibles": [
+        { "id": "silver_key", "name": "Silver Key", "icon": "🗝️" },
+        { "id": "lantern", "name": "Lantern", "icon": "🏮" },
+        { "id": "moon_crystal", "name": "Moon Crystal", "icon": "💎" }
+      ],
+      "grid": [
+        "###############",
+        "#P.....#......#",
+        "#.###.#.####..#",
+        "#...#...#..A..#",
+        "###.#.###.#####",
+        "#.....#.......#",
+        "#.#####.###..#",
+        "#.....#...#..#",
+        "#.###.###.#.B#",
+        "#.....C.....#.#",
+        "###############"
+      ]
+    },
+    "npc": {
+      "character": "Owl",
+      "portrait": "assets/images/owl.svg",
+      "greeting": "You found what the forest hid. How shall we proceed, Luna?",
+      "choices": [
+        {
+          "id": "trust",
+          "label": "Trust the Owl",
+          "response": "Owl: \"Wise choice. Match related memories — not identical ones. You have five lives. Use your power-ups wisely.\""
+        },
+        {
+          "id": "question",
+          "label": "Question the Owl",
+          "response": "Owl: \"Fair enough. Moon pairs with Night, Key with Lock, Flower with Garden. Five lives — choose carefully.\""
+        },
+        {
+          "id": "ignore",
+          "label": "Ignore the Owl",
+          "response": "Owl: \"I will guide you anyway. Related pairs only — five lives before the path closes.\""
+        }
+      ]
+    },
+    "memory": {
+      "level": 1,
+      "lives": 5,
+      "previewSeconds": 5,
+      "flipTimeLimitSeconds": 8,
+      "shuffleIntervalSeconds": 0,
+      "pairs": [
+        {
+          "pairId": "moon_night",
+          "dialogue": "Luna: \"The moon feels familiar... it belongs to the night sky. Is that why my name is Luna?\"",
+          "cards": [
+            { "name": "Moon", "image": "assets/images/moon.svg" },
+            { "name": "Night", "image": "assets/images/star.svg" }
+          ]
+        },
+        {
+          "pairId": "key_lock",
+          "dialogue": "Owl: \"This silver key opens the lock on the path to your next memory.\"",
+          "cards": [
+            { "name": "Key", "image": "assets/images/key.svg" },
+            { "name": "Lock", "image": "assets/images/key.svg" }
+          ]
+        },
+        {
+          "pairId": "flower_garden",
+          "dialogue": "Luna: \"I remember holding this flower in a secret garden when I was little.\"",
+          "cards": [
+            { "name": "Flower", "image": "assets/images/flower.svg" },
+            { "name": "Garden", "image": "assets/images/mushroom.svg" }
+          ]
+        },
+        {
+          "pairId": "owl_guide",
+          "dialogue": "Owl: \"You are finally awake, Luna. I will guide you through the forest.\"",
+          "cards": [
+            { "name": "Owl", "image": "assets/images/owl.svg" },
+            { "name": "Guide", "image": "assets/images/owl.svg" }
+          ]
+        },
+        {
+          "pairId": "lantern_light",
+          "dialogue": "Luna: \"This lantern brings light to the darkest paths.\"",
+          "cards": [
+            { "name": "Lantern", "image": "assets/images/lantern.svg" },
+            { "name": "Light", "image": "assets/images/lantern.svg" }
+          ]
+        },
+        {
+          "pairId": "mushroom_dream",
+          "dialogue": "Owl: \"The forest protects forgotten dreams beneath these mushrooms.\"",
+          "cards": [
+            { "name": "Mushroom", "image": "assets/images/mushroom.svg" },
+            { "name": "Dream", "image": "assets/images/moon.svg" }
+          ]
+        }
+      ]
+    },
+    "storyScene": {
+      "title": "Memory Restored",
+      "text": "The glowing tree trembles. Luna sees flashes of her childhood in the forest. The Owl bows slowly.\n\nOwl: \"One memory fragment returns. The silver gate awaits beyond the roots.\""
+    },
+    "ending": "The glowing tree opens a hidden path. A silver gate appears between two ancient roots. Luna uses the silver key and walks through the gate toward the Moonlight Lake."
+  },
+  {
+    "id": 2,
+    "title": "The Moonlight Lake",
+    "background": "assets/images/lake-bg.svg",
+    "intro": "Beyond the gate lies a lake of memories. Navigate the boat, solve the lake maze, and recover Luna's final memories.",
+    "fragmentName": "Lake Memory Fragment",
+    "boat": {
+      "title": "Boat Navigation — Collect Crystal Stars",
+      "hint": "6 crystal stars are scattered on the lake. Collect any 3, then sail to the center goal. Rocks block your boat!",
+      "goalStars": 3,
+      "timeLimit": 90,
+      "goal": { "x": 50, "y": 12 },
+      "stars": [
+        { "x": 14, "y": 54 },
+        { "x": 32, "y": 36 },
+        { "x": 50, "y": 26 },
+        { "x": 68, "y": 36 },
+        { "x": 86, "y": 54 },
+        { "x": 50, "y": 74 }
+      ],
+      "rocks": [
+        { "x": 24, "y": 44 },
+        { "x": 42, "y": 52 },
+        { "x": 58, "y": 52 },
+        { "x": 76, "y": 44 },
+        { "x": 36, "y": 66 },
+        { "x": 64, "y": 66 }
+      ]
+    },
+    "lakeMaze": {
+      "title": "Lake Maze — Collect Moon Keys",
+      "hint": "Use Arrow Keys (↑ ↓ ← →) or W A S D keys to move one step at a time. Collect all 3 Moon Keys.",
+      "collectibles": [
+        { "id": "moon_key_1", "name": "Moon Key", "icon": "🗝️" },
+        { "id": "moon_key_2", "name": "Moon Key", "icon": "🗝️" },
+        { "id": "moon_key_3", "name": "Moon Key", "icon": "🗝️" }
+      ],
+      "grid": [
+        "#################",
+        "#P.......#......#",
+        "#.#####.#.#####.#",
+        "#.....#.#.....#.#",
+        "#####.#.#.###.#.#",
+        "#.....#...#...#.#",
+        "#.#######.#.###.#",
+        "#A........#.....#",
+        "#.#######.#####.#",
+        "#.......#.....B.#",
+        "#####.#.#####.#.#",
+        "#.....#.....#..C#",
+        "#################"
+      ]
+    },
+    "npc": {
+      "character": "Swan",
+      "portrait": "assets/images/swan.svg",
+      "greeting": "Swan: \"You crossed the lake and found the keys. The memory board awaits — match related pairs and remember the story.\"",
+      "fireflyHint": "Firefly: \"You have five lives and three of each power-up. Pair related concepts — Boat with Lake, Star with Hope!\"",
+      "choices": [
+        {
+          "id": "trust",
+          "label": "Trust the Swan",
+          "response": "Swan: \"Your memories were never lost — only hidden safely beneath the water.\""
+        },
+        {
+          "id": "question",
+          "label": "Question the Swan",
+          "response": "Swan: \"Doubt is natural. Pair related concepts: Boat with Lake, Star with Hope, Pearl with Necklace.\""
+        },
+        {
+          "id": "ignore",
+          "label": "Ignore the Swan",
+          "response": "Swan: \"The lake remembers even when you do not. Proceed — use your power-ups wisely.\""
+        }
+      ]
+    },
+    "memory": {
+      "level": 2,
+      "lives": 5,
+      "previewSeconds": 5,
+      "flipTimeLimitSeconds": 6,
+      "shuffleIntervalSeconds": 0,
+      "pairs": [
+        {
+          "pairId": "pearl_necklace",
+          "dialogue": "Luna: \"This pearl... it was from a necklace I wore long ago.\"",
+          "cards": [
+            { "name": "Pearl", "image": "assets/images/pearl.svg" },
+            { "name": "Necklace", "image": "assets/images/pearl.svg" }
+          ]
+        },
+        {
+          "pairId": "boat_lake",
+          "dialogue": "Owl: \"You once crossed this lake in a boat to protect the forest.\"",
+          "cards": [
+            { "name": "Boat", "image": "assets/images/boat.svg" },
+            { "name": "Lake", "image": "assets/images/lake-bg.svg" }
+          ]
+        },
+        {
+          "pairId": "star_hope",
+          "dialogue": "Luna: \"The stars were guiding me that night — they meant hope.\"",
+          "cards": [
+            { "name": "Star", "image": "assets/images/star.svg" },
+            { "name": "Hope", "image": "assets/images/star.svg" }
+          ]
+        },
+        {
+          "pairId": "swan_guardian",
+          "dialogue": "Swan: \"Your memories were never lost. They were hidden safely.\"",
+          "cards": [
+            { "name": "Swan", "image": "assets/images/swan.svg" },
+            { "name": "Guardian", "image": "assets/images/swan.svg" }
+          ]
+        },
+        {
+          "pairId": "crystal_truth",
+          "dialogue": "Owl: \"This crystal contains the truth of Luna's sacrifice.\"",
+          "cards": [
+            { "name": "Crystal", "image": "assets/images/crystal.svg" },
+            { "name": "Truth", "image": "assets/images/crystal.svg" }
+          ]
+        },
+        {
+          "pairId": "lily_healing",
+          "dialogue": "Luna: \"The water lily brings calm and healing to troubled hearts.\"",
+          "cards": [
+            { "name": "Water Lily", "image": "assets/images/water-lily.svg" },
+            { "name": "Healing", "image": "assets/images/water-lily.svg" }
+          ]
+        },
+        {
+          "pairId": "moon_reflection",
+          "dialogue": "Luna: \"The moon reflects on the lake just as my memories reflect my past.\"",
+          "cards": [
+            { "name": "Moon", "image": "assets/images/moon.svg" },
+            { "name": "Reflection", "image": "assets/images/moon.svg" }
+          ]
+        },
+        {
+          "pairId": "key_gate",
+          "dialogue": "Luna: \"The silver key still opens the gate in my mind.\"",
+          "cards": [
+            { "name": "Key", "image": "assets/images/key.svg" },
+            { "name": "Gate", "image": "assets/images/key.svg" }
+          ]
+        }
+      ]
+    },
+    "storyScene": {
+      "title": "The Truth Emerges",
+      "text": "The lake glows as Luna recalls crossing the water to seal away darkness. She gave her memories to save the magical forest.\n\nSwan: \"One final trial awaits — the Memory Guardian will test what you have learned.\""
+    },
+    "ending": "The lake begins to glow. The crystal rises from the water. Luna touches it and remembers everything — she protected the forest by giving up her memories, and now they return as the darkness fades.",
+    "finalMessage": "Luna smiles as moonlight fills the sky. Her memories are back, and the forest is peaceful again."
+  }
+]

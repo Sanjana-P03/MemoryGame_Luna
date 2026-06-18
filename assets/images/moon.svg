@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="16" fill="#1e293b"/>
+  <circle cx="100" cy="95" r="50" fill="#fef9c3"/>
+  <circle cx="100" cy="95" r="40" fill="#fde68a"/>
+  <circle cx="85" cy="90" r="6" fill="#475569" opacity="0.4"/>
+  <circle cx="115" cy="85" r="4" fill="#475569" opacity="0.3"/>
+  <circle cx="95" cy="105" r="3" fill="#475569" opacity="0.25"/>
+  <text x="100" y="185" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="13" font-weight="700">MOON</text>
+</svg>

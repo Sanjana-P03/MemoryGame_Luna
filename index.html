@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luna and the Lost Memories</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- Global HUD -->
+    <aside id="game-hud" class="game-hud hidden">
+      <div class="hud-section">
+        <span class="hud-title">Inventory</span>
+        <ul id="hud-inventory" class="hud-list"></ul>
+      </div>
+      <div class="hud-section">
+        <span class="hud-title">Fragments</span>
+        <ul id="hud-fragments" class="hud-list fragments-list"></ul>
+      </div>
+      <div class="hud-section">
+        <span class="hud-title">Power-Ups</span>
+        <div id="hud-powerups" class="powerup-bar"></div>
+      </div>
+      <div class="hud-section hud-lives hidden" id="hud-lives-wrap">
+        <span class="hud-title">Lives</span>
+        <div id="hud-lives" class="lives-display"></div>
+      </div>
+    </aside>
+
+    <!-- Start Screen -->
+    <section id="screen-start" class="screen active">
+      <div class="screen-overlay start-overlay">
+        <div class="start-content panel">
+          <div class="character-badge">
+            <img src="assets/images/luna.svg" alt="Luna" class="luna-portrait">
+          </div>
+          <h1 class="game-title">Luna and the Lost Memories</h1>
+          <p class="game-tagline">Explore magical lands, solve puzzles, match memory pairs, and restore Luna's forgotten past.</p>
+          <p class="best-score-label">Best Score: <span id="best-score-display">0</span></p>
+          <div id="achievements-preview" class="achievements-preview"></div>
+          <button id="btn-start" class="btn btn-primary btn-large">Start Adventure</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter Intro -->
+    <section id="screen-chapter-intro" class="screen">
+      <div class="screen-overlay chapter-intro-overlay">
+        <div class="chapter-intro-content panel">
+          <p class="chapter-label">Chapter <span id="intro-chapter-num">1</span></p>
+          <h2 id="intro-chapter-title">The Enchanted Forest</h2>
+          <p id="intro-chapter-text" class="chapter-intro-text"></p>
+          <p id="phase-indicator" class="phase-indicator"></p>
+          <button id="btn-continue-chapter" class="btn btn-primary">Begin</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forest / Lake Maze -->
+    <section id="screen-maze" class="screen">
+      <div class="adventure-header panel">
+        <h2 id="maze-title">Forest Maze</h2>
+        <p id="maze-hint" class="adventure-hint"></p>
+        <p id="maze-stats" class="maze-stats">Collected: 0 / 3</p>
+      </div>
+      <div id="maze-grid" class="maze-grid panel"></div>
+      <p class="maze-controls-hint">Move with <strong>Arrow Keys</strong> (↑ ↓ ← →) or <strong>W A S D</strong> keys · Tap buttons below on mobile</p>
+      <div class="maze-controls">
+        <button type="button" class="btn btn-secondary maze-btn" data-dir="up">▲</button>
+        <div class="maze-controls-row">
+          <button type="button" class="btn btn-secondary maze-btn" data-dir="left">◀</button>
+          <button type="button" class="btn btn-secondary maze-btn" data-dir="down">▼</button>
+          <button type="button" class="btn btn-secondary maze-btn" data-dir="right">▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NPC Dialogue -->
+    <section id="screen-dialogue" class="screen">
+      <div class="dialogue-panel panel">
+        <img id="npc-portrait" src="" alt="" class="npc-portrait">
+        <h2 id="npc-name" class="npc-name"></h2>
+        <p id="npc-text" class="npc-text"></p>
+        <p id="firefly-hint" class="firefly-hint hidden"></p>
+        <div id="dialogue-choices" class="choice-group"></div>
+        <p id="npc-response" class="npc-response hidden"></p>
+        <button id="btn-dialogue-continue" class="btn btn-primary hidden">Continue</button>
+      </div>
+    </section>
+
+    <!-- Memory Match -->
+    <section id="screen-game" class="screen">
+      <header class="game-header panel">
+        <h1 class="game-header-title">Memory Challenge — <span id="memory-level-label">Level 1</span></h1>
+        <div class="stats-bar">
+          <div class="stat"><span class="stat-label">Score</span><span id="stat-score" class="stat-value">0</span></div>
+          <div class="stat"><span class="stat-label">Moves</span><span id="stat-moves" class="stat-value">0</span></div>
+          <div class="stat"><span class="stat-label">Time</span><span id="stat-time" class="stat-value">00:00</span></div>
+          <div class="stat"><span class="stat-label">Pairs</span><span id="stat-pairs" class="stat-value">0 / 6</span></div>
+          <div class="stat"><span class="stat-label">Lives</span><span id="stat-lives" class="stat-value">♥♥♥</span></div>
+        </div>
+        <p id="difficulty-hint" class="difficulty-hint"></p>
+      </header>
+      <main class="game-main">
+        <div id="preview-banner" class="preview-banner hidden">Memorize the cards...</div>
+        <div class="board-area">
+          <div id="story-popup" class="story-popup">
+            <p class="story-label">Story</p>
+            <p id="story-dialogue" class="story-dialogue">Match related memory pairs...</p>
+          </div>
+          <div id="flip-timer-wrap" class="flip-timer-wrap hidden">
+            <div class="flip-timer-label"><span>Memory fading...</span><span id="flip-timer-text">5s</span></div>
+            <div class="flip-timer-track"><div id="flip-timer-bar" class="flip-timer-bar"></div></div>
+          </div>
+          <div id="card-grid" class="card-grid"></div>
+        </div>
+      </main>
+    </section>
+
+    <!-- Story Scene -->
+    <section id="screen-story" class="screen">
+      <div class="screen-overlay">
+        <div class="story-scene-content panel">
+          <h2 id="story-scene-title"></h2>
+          <p id="story-scene-text" class="story-scene-text"></p>
+          <button id="btn-story-continue" class="btn btn-primary">Continue</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Boat Navigation -->
+    <section id="screen-boat" class="screen">
+      <div class="adventure-header panel">
+        <h2 id="boat-title">Boat Navigation</h2>
+        <p id="boat-hint" class="adventure-hint"></p>
+        <p id="boat-stats" class="boat-stats">Crystal Stars: 0/3 collected (6 on lake) | Time: 90s</p>
+      </div>
+      <div id="boat-game" class="boat-game panel">
+        <div id="boat-player" class="boat-player">⛵</div>
+        <div id="boat-stars-layer"></div>
+        <div id="boat-rocks-layer"></div>
+        <div id="boat-goal" class="boat-goal">⭐</div>
+      </div>
+      <div class="boat-controls">
+        <button type="button" class="btn btn-secondary boat-btn" data-dir="up">▲</button>
+        <div class="boat-controls-row">
+          <button type="button" class="btn btn-secondary boat-btn" data-dir="left">◀</button>
+          <button type="button" class="btn btn-secondary boat-btn" data-dir="down">▼</button>
+          <button type="button" class="btn btn-secondary boat-btn" data-dir="right">▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Boss Quiz -->
+    <section id="screen-boss" class="screen">
+      <div class="screen-overlay boss-overlay">
+        <div class="boss-panel panel">
+          <h2>Memory Guardian</h2>
+          <p id="boss-intro" class="boss-intro"></p>
+          <p id="boss-question" class="boss-question"></p>
+          <div id="boss-options" class="boss-options"></div>
+          <p id="boss-feedback" class="boss-feedback"></p>
+          <p id="boss-progress" class="boss-progress"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter Complete -->
+    <section id="screen-chapter-complete" class="screen">
+      <div class="screen-overlay">
+        <div class="complete-content panel">
+          <div id="chapter-stars" class="star-rating"></div>
+          <h2>Chapter Complete!</h2>
+          <p id="chapter-complete-title" class="chapter-complete-title"></p>
+          <p class="fragment-label">Collected: <span id="fragment-collected-name"></span></p>
+          <p id="chapter-ending-text" class="ending-text"></p>
+          <div class="complete-stats">
+            <p>Score: <strong id="chapter-score">0</strong></p>
+            <p>Total Score: <strong id="total-score-chapter">0</strong></p>
+          </div>
+          <button id="btn-next-chapter" class="btn btn-primary">Continue Journey</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final -->
+    <section id="screen-final" class="screen">
+      <div class="screen-overlay final-overlay">
+        <div class="complete-content panel final-panel">
+          <div id="final-stars" class="star-rating"></div>
+          <h2>Luna's Complete Memory</h2>
+          <div id="final-fragments-display" class="final-fragments"></div>
+          <p id="final-ending-text" class="ending-text"></p>
+          <p id="final-message" class="final-message"></p>
+          <div class="complete-stats">
+            <p>Total Score: <strong id="final-score">0</strong></p>
+            <p>Total Time: <strong id="final-time">00:00</strong></p>
+            <p>Best Score: <strong id="final-best-score">0</strong></p>
+          </div>
+          <div id="achievements-final" class="achievements-final"></div>
+          <button id="btn-play-again" class="btn btn-primary btn-large">Play Again</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Game Over (lives) -->
+    <section id="screen-gameover" class="screen">
+      <div class="screen-overlay">
+        <div class="complete-content panel">
+          <h2>Memories Lost...</h2>
+          <p id="gameover-text">You ran out of lives. The forest closes its path.</p>
+          <button id="btn-retry-memory" class="btn btn-primary">Retry Memory Challenge</button>
+          <button id="btn-restart-game" class="btn btn-secondary">Restart Adventure</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

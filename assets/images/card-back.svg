@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 160">
+  <defs>
+    <linearGradient id="back" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c1d95"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="160" rx="12" fill="url(#back)"/>
+  <circle cx="60" cy="70" r="28" fill="none" stroke="#a78bfa" stroke-width="2" opacity="0.7"/>
+  <path d="M60 50 L65 65 L80 65 L68 74 L73 89 L60 80 L47 89 L52 74 L40 65 L55 65 Z" fill="#c4b5fd" opacity="0.85"/>
+  <text x="60" y="125" text-anchor="middle" fill="#e9d5ff" font-family="sans-serif" font-size="10" font-weight="700">LUNA</text>
+</svg>

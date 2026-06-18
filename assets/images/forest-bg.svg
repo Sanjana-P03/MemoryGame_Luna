@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="forestSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#134e4a"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#forestSky)"/>
+  <ellipse cx="960" cy="200" rx="200" ry="180" fill="#fef08a" opacity="0.35"/>
+  <rect x="880" y="350" width="160" height="500" rx="20" fill="#422006"/>
+  <ellipse cx="960" cy="350" rx="280" ry="200" fill="#166534"/>
+  <ellipse cx="820" cy="380" rx="120" ry="80" fill="#15803d"/>
+  <ellipse cx="1100" cy="370" rx="130" ry="90" fill="#15803d"/>
+  <rect x="0" y="850" width="1920" height="230" fill="#14532d"/>
+  <circle cx="200" cy="780" r="6" fill="#fde68a"/>
+  <circle cx="350" cy="720" r="4" fill="#fef08a"/>
+  <circle cx="1500" cy="760" r="5" fill="#fde68a"/>
+  <circle cx="1700" cy="700" r="7" fill="#fef08a"/>
+</svg>

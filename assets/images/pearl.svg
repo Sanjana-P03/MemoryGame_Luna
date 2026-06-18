@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="16" fill="#1e293b"/>
+  <circle cx="100" cy="95" r="35" fill="#f8fafc"/>
+  <circle cx="100" cy="95" r="28" fill="#e2e8f0"/>
+  <ellipse cx="88" cy="88" rx="8" ry="10" fill="#cbd5e1"/>
+  <ellipse cx="112" cy="92" rx="6" ry="8" fill="#cbd5e1"/>
+  <text x="100" y="185" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="13" font-weight="700">PEARL</text>
+</svg>

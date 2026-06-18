@@ -1,0 +1,10 @@
+Place optional sound files here:
+
+- bg-music.mp3
+- flip.mp3
+- match.mp3
+- wrong.mp3
+- chapter-complete.mp3
+- game-complete.mp3
+
+The game works without these files. If a sound is missing, it is skipped silently.
